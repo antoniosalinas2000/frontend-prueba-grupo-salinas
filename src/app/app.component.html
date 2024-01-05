@@ -1,3 +1,8 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet>
+    <app-loader *ngIf="mostrarLoaderFlag" 
+                [slides]="configuracionActual === 'config1' ? configuracion1 : configuracion2" 
+                [interval]="2500"
+                ></app-loader>
+  </ion-router-outlet>
 </ion-app>

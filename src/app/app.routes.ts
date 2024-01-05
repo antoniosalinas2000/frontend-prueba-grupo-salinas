@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { SuccessfulRedirectComponent } from './successful-redirect/successful-redirect.component';
 
 export const routes: Routes = [
   {
@@ -9,5 +10,12 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'successful-redirect',
+    loadComponent: () =>
+      import('./successful-redirect/successful-redirect.component').then(
+        (m) => m.SuccessfulRedirectComponent
+      ),
   },
 ];

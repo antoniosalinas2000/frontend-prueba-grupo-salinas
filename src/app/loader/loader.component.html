@@ -1,0 +1,10 @@
+<ion-content>
+  <swiper-container #miSwiper [pagination]="true" [options]="slideOptions">
+    <swiper-slide *ngFor="let slide of slides">
+      <img [src]="slide.image">
+      <ion-text>
+        <h2>{{ slide.text }}</h2>
+      </ion-text>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>
